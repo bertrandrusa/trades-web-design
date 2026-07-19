@@ -3,53 +3,54 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080908">
+  <meta name="theme-color" content="#fffaf2">
   <meta
     name="description"
-    content="Independent web designer and developer Bertrand Rusanganwa creates distinctive, high-performing websites for local service and trade businesses."
+    content="Bertrand Design creates bright, distinctive and easy-to-use websites for small businesses and local service brands."
   >
   <meta
     name="keywords"
-    content="Bertrand Rusanganwa, web designer, web developer, small business web design, trade business websites, Indiana web designer"
+    content="web designer, small business website, service business website, website redesign, responsive web design"
   >
-  <meta property="og:title" content="Bertrand Rusanganwa — Web Designer & Developer">
+  <meta property="og:title" content="Bertrand Design — Bright websites for growing businesses">
   <meta
     property="og:description"
-    content="Distinctive websites built with clear strategy, thoughtful design, and dependable code."
+    content="Clear strategy, expressive design and responsive development—all in one smooth process."
   >
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://bertrandrusa.github.io/trades-web-design/">
-  <meta
-    property="og:image"
-    content="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=85"
-  >
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <link rel="canonical" href="https://bertrandrusa.github.io/trades-web-design/">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap"
     rel="stylesheet"
   >
-  <title>Bertrand Rusanganwa — Web Designer &amp; Developer</title>
+  <title>Bertrand Design — Bright websites for growing businesses</title>
 
   <style>
     :root {
-      --ink: #080908;
-      --ink-soft: #101110;
-      --paper: #f0eee7;
-      --white: #fbfaf6;
-      --muted: #92938d;
-      --line: rgba(240, 238, 231, 0.18);
-      --line-dark: rgba(8, 9, 8, 0.2);
-      --blue: #8fb6ff;
-      --blue-deep: #162d50;
-      --green: #93d6a3;
+      --white: #ffffff;
+      --cream: #fffaf2;
+      --cream-deep: #fff1dd;
+      --brown: #4b241c;
+      --brown-soft: #754b40;
+      --coral: #ff6847;
+      --coral-soft: #ffb9a8;
+      --orange: #ff9f1c;
+      --yellow: #ffd84d;
+      --lime: #dff56a;
+      --mint: #bfe9b2;
+      --line: rgba(75, 36, 28, 0.16);
+      --shadow: 0 24px 70px rgba(112, 61, 38, 0.14);
       --sans: "DM Sans", Arial, sans-serif;
       --serif: "Instrument Serif", Georgia, serif;
-      --pad: clamp(20px, 3vw, 48px);
-      --header-h: 72px;
+      --pad: clamp(20px, 4vw, 64px);
+      --radius-lg: clamp(26px, 4vw, 54px);
+      --radius-md: 28px;
+      --header-height: 92px;
     }
 
     *,
@@ -64,30 +65,23 @@
 
     html {
       scroll-behavior: smooth;
-      background: var(--ink);
+      background: var(--cream);
     }
 
     body {
       min-width: 320px;
       overflow-x: hidden;
-      background: var(--ink);
-      color: var(--paper);
+      background: var(--cream);
+      color: var(--brown);
       font-family: var(--sans);
       font-size: 16px;
-      font-weight: 400;
       line-height: 1.5;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
 
-    body.is-loading,
     body.menu-open {
       overflow: hidden;
-    }
-
-    img {
-      display: block;
-      width: 100%;
     }
 
     a {
@@ -104,24 +98,19 @@
       font: inherit;
     }
 
-    button,
-    a {
-      -webkit-tap-highlight-color: transparent;
-    }
-
     button {
       background: none;
       cursor: pointer;
     }
 
     :focus-visible {
-      outline: 2px solid var(--blue);
+      outline: 3px solid var(--orange);
       outline-offset: 4px;
     }
 
     ::selection {
-      background: var(--blue);
-      color: var(--ink);
+      background: var(--yellow);
+      color: var(--brown);
     }
 
     .skip-link {
@@ -130,15 +119,21 @@
       top: 12px;
       left: 12px;
       padding: 10px 14px;
-      background: var(--paper);
-      color: var(--ink);
-      font-size: 0.75rem;
-      transform: translateY(-150%);
-      transition: transform 180ms ease;
+      border-radius: 999px;
+      background: var(--brown);
+      color: var(--white);
+      transform: translateY(-180%);
+      transition: transform 200ms ease;
     }
 
     .skip-link:focus {
       transform: translateY(0);
+    }
+
+    .frame {
+      width: min(100%, 1600px);
+      margin-inline: auto;
+      padding-inline: var(--pad);
     }
 
     .serif {
@@ -147,229 +142,279 @@
       font-weight: 400;
     }
 
-    .micro {
-      font-size: 0.67rem;
-      font-weight: 500;
-      letter-spacing: 0.14em;
-      line-height: 1.2;
-      text-transform: uppercase;
-    }
-
-    .frame {
-      padding-inline: var(--pad);
-    }
-
-    .section-rule {
-      border-top: 1px solid var(--line);
-    }
-
-    .link-arrow {
+    .eyebrow {
       display: inline-flex;
       align-items: center;
-      gap: 12px;
-      padding-bottom: 5px;
-      border-bottom: 1px solid currentColor;
-      font-size: 0.77rem;
-      letter-spacing: 0.1em;
+      gap: 9px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      transition: gap 220ms ease, color 220ms ease;
     }
 
-    .link-arrow:hover {
-      gap: 20px;
-      color: var(--blue);
-    }
-
-    .link-arrow span {
-      font-size: 1rem;
-      line-height: 0;
-    }
-
-    /* Loader */
-    .loader {
-      position: fixed;
-      z-index: 999;
-      inset: 0;
-      display: grid;
-      place-items: center;
-      background: var(--ink);
-      transition: opacity 550ms cubic-bezier(0.76, 0, 0.24, 1),
-        visibility 550ms cubic-bezier(0.76, 0, 0.24, 1);
-    }
-
-    .loader.is-hidden {
-      visibility: hidden;
-      opacity: 0;
-      pointer-events: none;
-    }
-
-    .loader-mark {
-      display: grid;
-      gap: 12px;
-      width: min(260px, 62vw);
-    }
-
-    .loader-name {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      font-size: 1.15rem;
-      letter-spacing: -0.04em;
-    }
-
-    .loader-name em {
-      font-family: var(--serif);
-      font-weight: 400;
-    }
-
-    .loader-track {
-      height: 1px;
-      overflow: hidden;
-      background: var(--line);
-    }
-
-    .loader-track::after {
-      display: block;
-      width: 100%;
-      height: 100%;
-      background: var(--paper);
+    .eyebrow::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--coral);
       content: "";
-      transform: scaleX(0);
-      transform-origin: left;
-      animation: load-line 900ms cubic-bezier(0.76, 0, 0.24, 1) forwards;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 54px;
+      padding: 0 24px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition:
+        transform 320ms cubic-bezier(0.16, 1, 0.3, 1),
+        gap 320ms cubic-bezier(0.16, 1, 0.3, 1),
+        background 220ms ease,
+        color 220ms ease;
+    }
+
+    .button:hover {
+      gap: 20px;
+      transform: translateY(-4px);
+    }
+
+    .button-primary {
+      background: var(--brown);
+      color: var(--white);
+      box-shadow: 0 14px 34px rgba(92, 48, 33, 0.18);
+    }
+
+    .button-primary:hover {
+      background: var(--coral);
+      color: var(--brown);
+    }
+
+    .button-light {
+      background: var(--white);
+      color: var(--brown);
+      box-shadow: var(--shadow);
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid currentColor;
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: gap 260ms ease, color 260ms ease;
+    }
+
+    .text-link:hover {
+      gap: 18px;
+      color: var(--coral);
     }
 
     /* Header */
     .site-header {
       position: fixed;
-      z-index: 90;
-      top: 0;
+      z-index: 100;
+      top: 18px;
       right: 0;
       left: 0;
-      height: var(--header-h);
-      border-bottom: 1px solid var(--line);
-      background: rgba(8, 9, 8, 0.82);
-      backdrop-filter: blur(16px);
-      transition: background 220ms ease;
-    }
-
-    .nav-grid {
-      display: grid;
-      grid-template-columns: 1.5fr repeat(3, 1fr);
-      height: 100%;
-    }
-
-    .brand,
-    .nav-link {
-      display: flex;
-      align-items: center;
-      min-width: 0;
       padding-inline: var(--pad);
+      pointer-events: none;
+    }
+
+    .nav {
+      display: flex;
+      width: min(100%, 1460px);
+      min-height: 64px;
+      margin-inline: auto;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 9px 8px 22px;
+      border: 1px solid rgba(75, 36, 28, 0.1);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.86);
+      box-shadow: 0 12px 40px rgba(112, 61, 38, 0.08);
+      backdrop-filter: blur(18px);
+      pointer-events: auto;
+      transition: box-shadow 260ms ease, transform 260ms ease;
+    }
+
+    .site-header.is-scrolled .nav {
+      box-shadow: 0 18px 52px rgba(112, 61, 38, 0.16);
+      transform: translateY(-5px);
     }
 
     .brand {
+      display: inline-flex;
+      align-items: baseline;
       gap: 4px;
       font-size: 1rem;
       font-weight: 600;
-      letter-spacing: -0.055em;
+      letter-spacing: -0.05em;
     }
 
-    .nav-links {
-      display: contents;
-    }
-
-    .brand em {
+    .brand span {
+      color: var(--coral);
       font-family: var(--serif);
+      font-size: 1.12em;
+      font-style: italic;
       font-weight: 400;
     }
 
+    .nav-right,
+    .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-links {
+      gap: 6px;
+    }
+
     .nav-link {
-      justify-content: center;
-      gap: 8px;
-      border-left: 1px solid var(--line);
-      color: rgba(240, 238, 231, 0.72);
-      font-size: 0.78rem;
+      padding: 12px 16px;
+      border-radius: 999px;
+      color: var(--brown-soft);
+      font-size: 0.76rem;
+      font-weight: 500;
       transition: background 200ms ease, color 200ms ease;
     }
 
-    .nav-link span {
-      color: var(--blue);
-      font-family: var(--serif);
-      font-size: 0.9rem;
-      font-style: italic;
+    .nav-link:hover {
+      background: var(--cream-deep);
+      color: var(--brown);
     }
 
-    .nav-link:hover {
-      background: rgba(255, 255, 255, 0.04);
-      color: var(--paper);
+    .nav-cta {
+      margin-left: 10px;
+      padding: 13px 18px;
+      border-radius: 999px;
+      background: var(--coral);
+      color: var(--brown);
+      font-size: 0.74rem;
+      font-weight: 600;
+      transition: transform 220ms ease, background 220ms ease;
+    }
+
+    .nav-cta:hover {
+      background: var(--yellow);
+      transform: scale(1.03);
     }
 
     .menu-button {
       display: none;
       align-items: center;
       gap: 10px;
-      padding: 0 var(--pad);
-      font-size: 0.75rem;
+      padding: 12px 14px;
+      font-size: 0.72rem;
+      font-weight: 600;
       text-transform: uppercase;
     }
 
-    .menu-lines {
+    .menu-icon {
       position: relative;
       width: 18px;
       height: 10px;
     }
 
-    .menu-lines::before,
-    .menu-lines::after {
+    .menu-icon::before,
+    .menu-icon::after {
       position: absolute;
       right: 0;
       left: 0;
-      height: 1px;
+      height: 2px;
+      border-radius: 2px;
       background: currentColor;
       content: "";
       transition: transform 220ms ease, top 220ms ease;
     }
 
-    .menu-lines::before {
+    .menu-icon::before {
       top: 1px;
     }
 
-    .menu-lines::after {
+    .menu-icon::after {
       top: 8px;
     }
 
-    .menu-button[aria-expanded="true"] .menu-lines::before {
+    .menu-button[aria-expanded="true"] .menu-icon::before {
       top: 5px;
       transform: rotate(45deg);
     }
 
-    .menu-button[aria-expanded="true"] .menu-lines::after {
+    .menu-button[aria-expanded="true"] .menu-icon::after {
       top: 5px;
       transform: rotate(-45deg);
     }
 
     /* Hero */
     .hero {
+      position: relative;
       min-height: 100svh;
-      padding-top: var(--header-h);
+      overflow: hidden;
+      padding-top: calc(var(--header-height) + 70px);
+      background:
+        radial-gradient(circle at 15% 20%, rgba(255, 216, 77, 0.32), transparent 25%),
+        radial-gradient(circle at 86% 72%, rgba(223, 245, 106, 0.42), transparent 25%),
+        var(--cream);
+    }
+
+    .hero-shape {
+      position: absolute;
+      border-radius: 48% 52% 62% 38% / 42% 46% 54% 58%;
+      pointer-events: none;
+      will-change: transform;
+    }
+
+    .shape-coral {
+      top: 17%;
+      right: -5%;
+      width: clamp(210px, 27vw, 500px);
+      aspect-ratio: 1.1;
+      background: var(--coral-soft);
+      animation: float-one 16s ease-in-out infinite;
+    }
+
+    .shape-yellow {
+      bottom: 4%;
+      left: -8%;
+      width: clamp(190px, 22vw, 390px);
+      aspect-ratio: 1;
+      background: var(--yellow);
+      animation: float-two 18s ease-in-out infinite;
+    }
+
+    .shape-lime {
+      top: 19%;
+      left: 8%;
+      width: clamp(80px, 9vw, 150px);
+      aspect-ratio: 1;
+      background: var(--lime);
+      animation: float-three 13s ease-in-out infinite;
     }
 
     .hero-inner {
+      position: relative;
+      z-index: 2;
       display: grid;
       grid-template-rows: auto 1fr auto;
-      min-height: calc(100svh - var(--header-h));
+      min-height: calc(100svh - var(--header-height) - 70px);
     }
 
-    .hero-meta {
-      display: grid;
-      grid-template-columns: 1.4fr 1fr;
-      padding-block: 18px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .hero-meta > :last-child {
-      justify-self: end;
-      text-align: right;
+    .hero-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      color: var(--brown-soft);
     }
 
     .availability {
@@ -379,243 +424,290 @@
     }
 
     .availability::before {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--green);
-      box-shadow: 0 0 0 4px rgba(147, 214, 163, 0.1);
-      content: "";
-    }
-
-    .hero-field {
-      position: relative;
-      min-height: clamp(220px, 32vh, 430px);
-      overflow: hidden;
-    }
-
-    .hero-orbit {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: clamp(220px, 30vw, 430px);
-      aspect-ratio: 1;
-      border: 1px solid rgba(143, 182, 255, 0.12);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-    }
-
-    .hero-orbit::before,
-    .hero-orbit::after {
-      position: absolute;
-      border: 1px solid rgba(143, 182, 255, 0.08);
-      border-radius: 50%;
-      content: "";
-    }
-
-    .hero-orbit::before {
-      inset: 17%;
-    }
-
-    .hero-orbit::after {
-      inset: 38%;
-      background: var(--blue);
-      box-shadow: 0 0 80px rgba(143, 182, 255, 0.18);
-    }
-
-    .orbit-dot {
-      position: absolute;
-      top: calc(50% - 4px);
-      left: calc(50% - 4px);
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: var(--paper);
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-      animation: orbit 12s linear infinite;
+      background: var(--mint);
+      box-shadow: 0 0 0 5px rgba(154, 210, 130, 0.18);
+      content: "";
     }
 
-    .hero-title-wrap {
-      padding-bottom: clamp(28px, 4vw, 64px);
+    .hero-main {
+      display: grid;
+      align-content: center;
+      padding-block: 70px 50px;
     }
 
     .hero h1 {
-      max-width: 1420px;
-      font-size: clamp(3.35rem, 7.65vw, 8.4rem);
-      font-weight: 400;
-      letter-spacing: -0.07em;
-      line-height: 0.88;
+      max-width: 1300px;
+      font-size: clamp(4.3rem, 8.7vw, 9.6rem);
+      font-weight: 500;
+      letter-spacing: -0.075em;
+      line-height: 0.82;
     }
 
     .hero h1 .serif {
-      color: var(--blue);
+      color: var(--coral);
       letter-spacing: -0.045em;
     }
 
-    .hero-foot {
+    .hero-bottom {
       display: grid;
-      grid-template-columns: 1fr auto;
+      grid-template-columns: minmax(0, 560px) auto;
+      justify-content: space-between;
+      gap: 40px;
       align-items: end;
-      gap: 30px;
-      padding-bottom: 24px;
+      padding-bottom: 34px;
     }
 
-    .hero-intro {
-      max-width: 490px;
-      color: rgba(240, 238, 231, 0.64);
-      font-size: clamp(0.86rem, 1.1vw, 1rem);
+    .hero-copy {
+      color: var(--brown-soft);
+      font-size: clamp(0.95rem, 1.3vw, 1.1rem);
     }
 
-    .scroll-cue {
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: flex-end;
+    }
+
+    /* Marquee */
+    .marquee-wrap {
+      overflow: hidden;
+      padding-block: 18px;
+      border-block: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .marquee {
+      display: flex;
+      width: max-content;
+      animation: marquee 24s linear infinite;
+    }
+
+    .marquee span {
       display: inline-flex;
       align-items: center;
-      gap: 14px;
-      color: var(--muted);
+      gap: 30px;
+      padding-right: 30px;
+      color: var(--brown-soft);
+      font-size: 0.76rem;
+      font-weight: 600;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      white-space: nowrap;
     }
 
-    .scroll-cue::after {
-      width: 1px;
-      height: 34px;
-      background: linear-gradient(var(--paper), transparent);
+    .marquee span::after {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--orange);
       content: "";
-      animation: scroll-line 1.8s ease-in-out infinite;
     }
 
     /* Work */
     .work {
-      padding-top: clamp(90px, 12vw, 180px);
+      padding-block: clamp(100px, 13vw, 190px);
+      background: var(--white);
     }
 
-    .section-heading {
+    .section-intro {
       display: grid;
-      grid-template-columns: 0.45fr 1.55fr;
-      gap: 40px;
-      padding: clamp(22px, 3vw, 42px) var(--pad) clamp(52px, 7vw, 100px);
+      grid-template-columns: 0.42fr 1.58fr;
+      gap: 50px;
+      align-items: start;
+      margin-bottom: clamp(54px, 8vw, 110px);
     }
 
-    .section-heading h2 {
-      max-width: 1120px;
-      font-size: clamp(2.5rem, 5.8vw, 6.5rem);
-      font-weight: 400;
-      letter-spacing: -0.06em;
-      line-height: 0.95;
+    .section-intro h2 {
+      max-width: 1070px;
+      font-size: clamp(3rem, 6.3vw, 7rem);
+      font-weight: 500;
+      letter-spacing: -0.065em;
+      line-height: 0.92;
+    }
+
+    .section-intro h2 .serif {
+      color: var(--coral);
+    }
+
+    .project-list {
+      display: grid;
+      gap: clamp(28px, 5vw, 70px);
     }
 
     .project {
-      border-top: 1px solid var(--line);
-    }
-
-    .project-head {
+      position: relative;
       display: grid;
-      grid-template-columns: 1.4fr 0.8fr 0.55fr;
-      gap: 30px;
-      align-items: end;
-      padding: 24px var(--pad);
-    }
-
-    .project-title {
-      font-size: clamp(1.8rem, 3.2vw, 3.7rem);
-      font-weight: 400;
-      letter-spacing: -0.055em;
-      line-height: 1;
-    }
-
-    .project-title sup {
-      position: relative;
-      top: -0.9em;
-      margin-right: 10px;
-      color: var(--blue);
-      font-family: var(--serif);
-      font-size: 0.32em;
-      font-style: italic;
-      letter-spacing: 0;
-    }
-
-    .project-role,
-    .project-year {
-      color: var(--muted);
-    }
-
-    .project-year {
-      justify-self: end;
-    }
-
-    .project-art {
-      position: relative;
-      min-height: clamp(430px, 68vw, 820px);
+      grid-template-columns: 0.88fr 1.12fr;
+      min-height: clamp(620px, 72vw, 820px);
       overflow: hidden;
-      background: #1b1c1a;
+      border-radius: var(--radius-lg);
+      background: var(--project-bg);
+      box-shadow: var(--shadow);
+      transition:
+        transform 650ms cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 650ms cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .project-art::before {
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(120deg, rgba(8, 9, 8, 0.08), rgba(8, 9, 8, 0.46)),
-        var(--project-image) center/cover;
+    .project:hover {
+      box-shadow: 0 38px 100px rgba(112, 61, 38, 0.2);
+      transform: translateY(-10px);
+    }
+
+    .project-coral {
+      --project-bg: #ffb29f;
+      --project-accent: #f05e3f;
+      --project-window: #fff8ec;
+    }
+
+    .project-yellow {
+      --project-bg: #ffd84d;
+      --project-accent: #f27634;
+      --project-window: #fffdf7;
+    }
+
+    .project-lime {
+      --project-bg: #dff56a;
+      --project-accent: #ee6d46;
+      --project-window: #fffaf2;
+    }
+
+    .project-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: clamp(34px, 5vw, 78px);
+    }
+
+    .project-number {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .project-number::before {
+      width: 22px;
+      height: 2px;
+      border-radius: 2px;
+      background: var(--project-accent);
       content: "";
-      filter: saturate(0.76) contrast(1.04);
-      transform: scale(1.02);
-      transition: transform 900ms cubic-bezier(0.16, 1, 0.3, 1),
-        filter 500ms ease;
     }
 
-    .project:hover .project-art::before {
-      filter: saturate(1) contrast(1.03);
-      transform: scale(1.055);
+    .project-copy h3 {
+      max-width: 610px;
+      margin-block: 60px 24px;
+      font-size: clamp(3rem, 5.5vw, 6.4rem);
+      font-weight: 500;
+      letter-spacing: -0.07em;
+      line-height: 0.88;
     }
 
-    .project-art--plumbing {
-      --project-image: url("https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=2000&q=86");
+    .project-copy h3 .serif {
+      color: var(--project-accent);
+    }
+
+    .project-copy p {
+      max-width: 490px;
+      color: rgba(75, 36, 28, 0.72);
+    }
+
+    .project-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 38px;
+    }
+
+    .project-meta span {
+      padding: 9px 13px;
+      border: 1px solid rgba(75, 36, 28, 0.18);
+      border-radius: 999px;
+      font-size: 0.66rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .project-visual {
+      position: relative;
       display: grid;
       place-items: center;
-      background: #87654c;
+      min-height: 520px;
+      padding: clamp(28px, 5vw, 72px);
     }
 
-    .project-art--portfolio {
-      --project-image: url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=2000&q=86");
-      display: grid;
-      place-items: center;
-      background: #13233e;
+    .project-visual::before,
+    .project-visual::after {
+      position: absolute;
+      border-radius: 50%;
+      content: "";
+      transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .project-art--portal {
-      --project-image: url("https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=2000&q=86");
-      display: grid;
-      place-items: center;
-      background: #16202a;
+    .project-visual::before {
+      top: 10%;
+      right: 7%;
+      width: 130px;
+      aspect-ratio: 1;
+      background: var(--project-accent);
+      opacity: 0.65;
     }
 
-    .browser-mockup {
+    .project-visual::after {
+      bottom: 8%;
+      left: 2%;
+      width: 190px;
+      aspect-ratio: 1;
+      background: rgba(255, 255, 255, 0.46);
+    }
+
+    .project:hover .project-visual::before {
+      transform: translate(-18px, 18px) rotate(16deg);
+    }
+
+    .project:hover .project-visual::after {
+      transform: translate(18px, -14px) scale(1.08);
+    }
+
+    .browser {
       position: relative;
       z-index: 2;
-      width: min(82%, 1120px);
+      width: min(100%, 720px);
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      background: rgba(10, 10, 10, 0.94);
-      box-shadow: 0 50px 120px rgba(0, 0, 0, 0.42);
-      transform: rotate(-1.4deg);
-      transition: transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
+      border: 1px solid rgba(75, 36, 28, 0.14);
+      border-radius: 24px;
+      background: var(--project-window);
+      box-shadow: 0 32px 80px rgba(97, 49, 31, 0.2);
+      transform: rotate(2deg);
+      transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .project:nth-of-type(even) .browser-mockup {
-      transform: rotate(1.4deg);
+    .project:nth-child(even) .browser {
+      transform: rotate(-2deg);
     }
 
-    .project:hover .browser-mockup,
-    .project:nth-of-type(even):hover .browser-mockup {
+    .project:hover .browser,
+    .project:nth-child(even):hover .browser {
       transform: rotate(0) translateY(-8px);
     }
 
     .browser-bar {
-      display: grid;
-      grid-template-columns: auto 1fr auto;
+      display: flex;
       align-items: center;
-      gap: 20px;
-      height: 42px;
-      padding: 0 16px;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-      color: rgba(255, 255, 255, 0.45);
-      font-size: 0.58rem;
+      justify-content: space-between;
+      height: 44px;
+      padding-inline: 16px;
+      border-bottom: 1px solid rgba(75, 36, 28, 0.1);
+      color: var(--brown-soft);
+      font-size: 0.59rem;
+      font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
@@ -626,424 +718,309 @@
     }
 
     .browser-dots i {
-      width: 5px;
-      height: 5px;
+      width: 6px;
+      height: 6px;
       border-radius: 50%;
-      background: rgba(255, 255, 255, 0.35);
+      background: var(--project-accent);
     }
 
-    .mock-site {
+    .mock-page {
       position: relative;
-      min-height: clamp(270px, 38vw, 500px);
-      padding: clamp(28px, 5vw, 70px);
+      min-height: clamp(360px, 42vw, 520px);
+      padding: clamp(30px, 5vw, 62px);
+      background:
+        radial-gradient(circle at 87% 16%, rgba(255, 255, 255, 0.75), transparent 22%),
+        var(--project-window);
     }
 
-    .mock-site::after {
-      position: absolute;
-      right: 5%;
-      bottom: 10%;
-      width: 36%;
-      height: 58%;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      background: var(--mock-panel, rgba(255, 255, 255, 0.06));
-      content: "";
-    }
-
-    .mock-label {
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      margin-bottom: clamp(24px, 4vw, 54px);
-      color: rgba(255, 255, 255, 0.62);
-      font-size: 0.58rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-    }
-
-    .mock-label::before {
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--mock-accent, var(--blue));
-      content: "";
-    }
-
-    .mock-site h3 {
-      position: relative;
-      z-index: 2;
-      max-width: 70%;
-      font-size: clamp(2rem, 5vw, 5.4rem);
-      font-weight: 400;
-      letter-spacing: -0.07em;
-      line-height: 0.88;
-    }
-
-    .mock-site h3 em {
-      color: var(--mock-accent, var(--blue));
-      font-family: var(--serif);
-      font-weight: 400;
-    }
-
-    .mock-site p {
-      position: relative;
-      z-index: 2;
-      max-width: 390px;
-      margin-top: clamp(20px, 3vw, 38px);
-      color: rgba(255, 255, 255, 0.56);
-      font-size: clamp(0.65rem, 1vw, 0.82rem);
-    }
-
-    .mock-plumbing {
-      --mock-accent: #f2b76f;
-      --mock-panel: linear-gradient(145deg, rgba(242, 183, 111, 0.24), rgba(255, 255, 255, 0.02));
-    }
-
-    .mock-portfolio {
-      --mock-accent: #93b8ff;
-      --mock-panel: linear-gradient(145deg, rgba(65, 105, 180, 0.34), rgba(255, 255, 255, 0.02));
-    }
-
-    .mock-portal {
-      --mock-accent: #75d0a4;
-      --mock-panel: linear-gradient(145deg, rgba(54, 126, 97, 0.32), rgba(255, 255, 255, 0.02));
-    }
-
-    .project-note {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      gap: 40px;
-      padding: 28px var(--pad) clamp(70px, 8vw, 120px);
-    }
-
-    .project-note p {
-      max-width: 690px;
-      color: rgba(240, 238, 231, 0.66);
-    }
-
-    .project-note .link-arrow {
-      justify-self: end;
-      align-self: start;
-    }
-
-    /* Statement and profile */
-    .statement {
-      display: grid;
-      grid-template-columns: 0.42fr 1.58fr;
-      gap: 40px;
-      padding: clamp(90px, 13vw, 190px) var(--pad);
-      border-top: 1px solid var(--line);
-    }
-
-    .statement h2 {
-      max-width: 1160px;
-      font-size: clamp(2.8rem, 6.5vw, 7.4rem);
-      font-weight: 400;
-      letter-spacing: -0.065em;
-      line-height: 0.93;
-    }
-
-    .statement h2 .serif {
-      color: var(--blue);
-    }
-
-    .profile {
-      background: var(--paper);
-      color: var(--ink);
-    }
-
-    .profile-grid {
-      display: grid;
-      grid-template-columns: minmax(300px, 0.8fr) minmax(0, 1.2fr);
-      min-height: 760px;
-    }
-
-    .profile-image {
-      position: relative;
-      min-height: 650px;
-      overflow: hidden;
-      background: #c9c3b8;
-    }
-
-    .profile-image img {
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 38%;
-      filter: grayscale(1) contrast(1.03);
-      transition: filter 400ms ease, transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
-    }
-
-    .profile-image:hover img {
-      filter: grayscale(0);
-      transform: scale(1.025);
-    }
-
-    .profile-image::after {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(to top, rgba(8, 9, 8, 0.25), transparent 35%);
-      content: "";
-      pointer-events: none;
-    }
-
-    .profile-caption {
-      position: absolute;
-      z-index: 2;
-      right: 24px;
-      bottom: 20px;
-      left: 24px;
+    .mock-nav {
       display: flex;
       justify-content: space-between;
-      color: var(--white);
-    }
-
-    .profile-copy {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding: clamp(34px, 6vw, 90px);
-      border-left: 1px solid var(--line-dark);
-    }
-
-    .profile-copy h2 {
-      max-width: 850px;
-      margin-top: clamp(36px, 6vw, 90px);
-      font-size: clamp(2.4rem, 4.7vw, 5.5rem);
-      font-weight: 400;
-      letter-spacing: -0.06em;
-      line-height: 0.96;
-    }
-
-    .profile-copy h2 .serif {
-      color: #315c9d;
-    }
-
-    .profile-body {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: clamp(24px, 4vw, 60px);
-      margin-top: 80px;
-      padding-top: 24px;
-      border-top: 1px solid var(--line-dark);
-    }
-
-    .profile-body p {
-      color: rgba(8, 9, 8, 0.67);
-    }
-
-    .profile-body strong {
-      display: block;
-      margin-bottom: 12px;
-      color: var(--ink);
-      font-size: 0.78rem;
+      gap: 20px;
+      padding-bottom: clamp(54px, 7vw, 90px);
+      font-size: 0.6rem;
       font-weight: 600;
       letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    /* Experience */
-    .experience {
-      padding: clamp(90px, 12vw, 170px) var(--pad);
+    .mock-page h4 {
+      max-width: 520px;
+      font-size: clamp(2.6rem, 5.2vw, 5.8rem);
+      font-weight: 500;
+      letter-spacing: -0.075em;
+      line-height: 0.84;
     }
 
-    .experience-top {
-      display: grid;
-      grid-template-columns: 0.42fr 1.58fr;
-      gap: 40px;
-      margin-bottom: clamp(54px, 8vw, 110px);
-    }
-
-    .experience-top h2 {
-      font-size: clamp(2.8rem, 5.4vw, 6rem);
-      font-weight: 400;
-      letter-spacing: -0.06em;
-      line-height: 0.95;
-    }
-
-    .experience-table {
-      border-top: 1px solid var(--line);
-    }
-
-    .experience-row {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr 0.65fr;
-      gap: 30px;
-      padding: 26px 0;
-      border-bottom: 1px solid var(--line);
-      transition: color 200ms ease, padding 280ms ease;
-    }
-
-    .experience-row:not(.experience-labels):hover {
-      padding-left: 12px;
-      color: var(--blue);
-    }
-
-    .experience-row span:last-child {
-      justify-self: end;
-      text-align: right;
-    }
-
-    .experience-labels {
-      padding-block: 12px;
-      color: var(--muted);
-    }
-
-    /* Capabilities */
-    .capabilities {
-      background: var(--paper);
-      color: var(--ink);
-    }
-
-    .cap-head {
-      display: grid;
-      grid-template-columns: 0.42fr 1.58fr;
-      gap: 40px;
-      padding: clamp(80px, 11vw, 160px) var(--pad) clamp(54px, 7vw, 100px);
-    }
-
-    .cap-head h2 {
-      max-width: 950px;
-      font-size: clamp(2.8rem, 6vw, 6.8rem);
-      font-weight: 400;
-      letter-spacing: -0.065em;
-      line-height: 0.94;
-    }
-
-    .cap-list {
-      border-top: 1px solid var(--line-dark);
-    }
-
-    .cap-row {
-      display: grid;
-      grid-template-columns: 0.3fr 1.2fr 1fr;
-      gap: 30px;
-      align-items: baseline;
-      padding: clamp(24px, 3vw, 42px) var(--pad);
-      border-bottom: 1px solid var(--line-dark);
-    }
-
-    .cap-number {
-      color: #315c9d;
+    .mock-page h4 span {
+      color: var(--project-accent);
       font-family: var(--serif);
-      font-size: 1.1rem;
       font-style: italic;
-    }
-
-    .cap-row h3 {
-      font-size: clamp(1.8rem, 3.4vw, 4rem);
       font-weight: 400;
-      letter-spacing: -0.055em;
-      line-height: 1;
     }
 
-    .cap-row p {
-      max-width: 500px;
-      color: rgba(8, 9, 8, 0.62);
+    .mock-page p {
+      max-width: 360px;
+      margin-top: 28px;
+      color: var(--brown-soft);
+      font-size: clamp(0.68rem, 0.9vw, 0.82rem);
     }
 
-    /* Process */
-    .process {
-      padding: clamp(90px, 12vw, 170px) var(--pad);
+    .mock-button {
+      display: inline-block;
+      margin-top: 28px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      background: var(--project-accent);
+      color: var(--brown);
+      font-size: 0.6rem;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
     }
 
-    .process-head {
-      display: grid;
-      grid-template-columns: 0.42fr 1.58fr;
-      gap: 40px;
-      margin-bottom: clamp(56px, 8vw, 100px);
-    }
-
-    .process-head h2 {
-      max-width: 900px;
-      font-size: clamp(2.7rem, 5.5vw, 6.2rem);
-      font-weight: 400;
-      letter-spacing: -0.06em;
-      line-height: 0.96;
-    }
-
-    .process-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-    }
-
-    .process-card {
-      min-height: 340px;
-      padding: 24px;
-      border-left: 1px solid var(--line);
-    }
-
-    .process-card:first-child {
-      border-left: 0;
-    }
-
-    .process-card h3 {
-      margin: 88px 0 18px;
-      font-size: clamp(1.45rem, 2.2vw, 2.5rem);
-      font-weight: 400;
-      letter-spacing: -0.045em;
-    }
-
-    .process-card p {
-      color: var(--muted);
-      font-size: 0.88rem;
-    }
-
-    /* Contact */
-    .contact {
+    /* Promise */
+    .promise {
+      position: relative;
       overflow: hidden;
-      background: var(--blue);
-      color: var(--ink);
+      padding-block: clamp(110px, 14vw, 210px);
+      background: var(--cream);
     }
 
-    .contact-marquee {
-      display: flex;
-      width: max-content;
-      padding: 20px 0 10px;
-      border-bottom: 1px solid rgba(8, 9, 8, 0.18);
-      white-space: nowrap;
-      animation: marquee 22s linear infinite;
+    .promise::before {
+      position: absolute;
+      top: 12%;
+      right: -7%;
+      width: clamp(220px, 32vw, 540px);
+      aspect-ratio: 1;
+      border-radius: 46% 54% 37% 63% / 56% 36% 64% 44%;
+      background: var(--coral-soft);
+      content: "";
+      animation: float-two 18s ease-in-out infinite;
     }
 
-    .contact-marquee span {
-      padding-right: 0.45em;
-      font-family: var(--serif);
-      font-size: clamp(5rem, 12vw, 13rem);
-      font-style: italic;
-      line-height: 0.82;
-    }
-
-    .contact-grid {
+    .promise-grid {
+      position: relative;
+      z-index: 2;
       display: grid;
-      grid-template-columns: 0.8fr 1.2fr;
-      gap: clamp(40px, 8vw, 120px);
-      padding: clamp(80px, 11vw, 150px) var(--pad);
+      grid-template-columns: 0.42fr 1.58fr;
+      gap: 50px;
     }
 
-    .contact-grid h2 {
-      max-width: 830px;
-      font-size: clamp(3rem, 6.5vw, 7.2rem);
-      font-weight: 400;
+    .promise h2 {
+      max-width: 1100px;
+      font-size: clamp(3.2rem, 6.8vw, 7.6rem);
+      font-weight: 500;
       letter-spacing: -0.07em;
       line-height: 0.9;
     }
 
-    .contact-intro p {
-      max-width: 410px;
-      margin-top: 32px;
-      color: rgba(8, 9, 8, 0.67);
+    .promise h2 .serif {
+      color: var(--coral);
+    }
+
+    /* Services */
+    .services {
+      padding-block: clamp(100px, 13vw, 190px);
+      background: var(--yellow);
+    }
+
+    .services .section-intro h2 .serif {
+      color: #d74f31;
+    }
+
+    .service-list {
+      border-top: 1px solid var(--line);
+    }
+
+    .service-row {
+      display: grid;
+      grid-template-columns: 0.22fr 0.9fr 0.88fr;
+      gap: 36px;
+      align-items: baseline;
+      padding: clamp(28px, 4vw, 54px) 0;
+      border-bottom: 1px solid var(--line);
+      transition: padding 400ms cubic-bezier(0.16, 1, 0.3, 1), background 220ms ease;
+    }
+
+    .service-row:hover {
+      padding-inline: 24px;
+      background: rgba(255, 255, 255, 0.25);
+    }
+
+    .service-number {
+      color: #d74f31;
+      font-family: var(--serif);
+      font-size: 1.25rem;
+      font-style: italic;
+    }
+
+    .service-row h3 {
+      font-size: clamp(2rem, 4vw, 4.8rem);
+      font-weight: 500;
+      letter-spacing: -0.06em;
+      line-height: 0.96;
+    }
+
+    .service-row p {
+      max-width: 530px;
+      color: rgba(75, 36, 28, 0.72);
+    }
+
+    /* Process */
+    .process {
+      padding-block: clamp(100px, 13vw, 190px);
+      background: var(--white);
+    }
+
+    .process .section-intro {
+      align-items: end;
+    }
+
+    .process-note {
+      max-width: 580px;
+      margin-top: 26px;
+      color: var(--brown-soft);
+    }
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .process-card {
+      min-height: 430px;
+      padding: clamp(28px, 4vw, 48px);
+      border-radius: var(--radius-md);
+      background: var(--card-bg);
+      transition: transform 450ms cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .process-card:nth-child(1) {
+      --card-bg: var(--cream-deep);
+    }
+
+    .process-card:nth-child(2) {
+      --card-bg: var(--coral-soft);
+    }
+
+    .process-card:nth-child(3) {
+      --card-bg: var(--lime);
+    }
+
+    .process-card:hover {
+      transform: translateY(-10px) rotate(-1deg);
+    }
+
+    .process-card:nth-child(2):hover {
+      transform: translateY(-10px) rotate(1deg);
+    }
+
+    .process-card h3 {
+      margin-top: 110px;
+      font-size: clamp(2rem, 3.5vw, 4rem);
+      font-weight: 500;
+      letter-spacing: -0.06em;
+      line-height: 0.98;
+    }
+
+    .process-card p {
+      margin-top: 22px;
+      color: rgba(75, 36, 28, 0.7);
+    }
+
+    /* Small about */
+    .studio-note {
+      padding-block: clamp(90px, 11vw, 150px);
+      background: var(--cream);
+    }
+
+    .studio-note-inner {
+      display: grid;
+      grid-template-columns: 0.42fr 1.1fr 0.48fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .studio-note h2 {
+      max-width: 760px;
+      font-size: clamp(2.5rem, 4.7vw, 5.4rem);
+      font-weight: 500;
+      letter-spacing: -0.065em;
+      line-height: 0.94;
+    }
+
+    .studio-note h2 .serif {
+      color: var(--coral);
+    }
+
+    .studio-note p {
+      color: var(--brown-soft);
+    }
+
+    /* Contact */
+    .contact {
+      position: relative;
+      overflow: hidden;
+      padding-top: clamp(100px, 13vw, 180px);
+      background: var(--coral);
+    }
+
+    .contact::before {
+      position: absolute;
+      top: -18%;
+      right: -4%;
+      width: clamp(260px, 35vw, 580px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: var(--yellow);
+      content: "";
+    }
+
+    .contact-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 0.82fr 1.18fr;
+      gap: clamp(48px, 9vw, 140px);
+      padding-bottom: clamp(90px, 11vw, 150px);
+    }
+
+    .contact h2 {
+      max-width: 760px;
+      font-size: clamp(3.3rem, 7vw, 7.7rem);
+      font-weight: 500;
+      letter-spacing: -0.075em;
+      line-height: 0.85;
+    }
+
+    .contact h2 .serif {
+      color: var(--white);
+      text-shadow: 0 2px 0 rgba(75, 36, 28, 0.1);
+    }
+
+    .contact-copy p {
+      max-width: 480px;
+      margin-top: 30px;
+      color: rgba(75, 36, 28, 0.76);
     }
 
     .contact-form {
       display: grid;
-      gap: 30px;
+      gap: 28px;
       align-content: end;
+      padding: clamp(28px, 4vw, 50px);
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(16px);
     }
 
     .form-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 24px;
+      gap: 22px;
     }
 
     .field {
@@ -1054,7 +1031,7 @@
     .field label {
       font-size: 0.67rem;
       font-weight: 600;
-      letter-spacing: 0.12em;
+      letter-spacing: 0.11em;
       text-transform: uppercase;
     }
 
@@ -1062,14 +1039,15 @@
     .field textarea {
       width: 100%;
       padding: 12px 0;
-      border-bottom: 1px solid rgba(8, 9, 8, 0.45);
+      border-bottom: 1px solid rgba(75, 36, 28, 0.35);
       outline: none;
       background: transparent;
+      transition: border-color 200ms ease;
     }
 
     .field input:focus,
     .field textarea:focus {
-      border-bottom-color: var(--ink);
+      border-bottom-color: var(--coral);
     }
 
     .field textarea {
@@ -1079,80 +1057,59 @@
 
     .field input::placeholder,
     .field textarea::placeholder {
-      color: rgba(8, 9, 8, 0.45);
+      color: rgba(75, 36, 28, 0.48);
     }
 
-    .form-actions {
+    .form-footer {
       display: flex;
       align-items: center;
       justify-content: space-between;
       gap: 24px;
     }
 
-    .submit-button {
-      display: inline-flex;
-      align-items: center;
-      gap: 14px;
-      min-height: 52px;
-      padding: 0 22px;
-      border: 1px solid var(--ink);
-      background: var(--ink);
-      color: var(--paper);
-      font-size: 0.75rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      transition: background 200ms ease, color 200ms ease, gap 200ms ease;
-    }
-
-    .submit-button:hover {
-      gap: 22px;
-      background: transparent;
-      color: var(--ink);
-    }
-
-    .direct-contact {
-      display: flex;
-      gap: 18px;
-      font-size: 0.75rem;
-      font-weight: 500;
-      text-transform: uppercase;
-    }
-
-    .direct-contact a {
-      border-bottom: 1px solid currentColor;
+    .form-note,
+    .form-status {
+      color: var(--brown-soft);
+      font-size: 0.72rem;
     }
 
     .form-status {
-      min-height: 20px;
-      color: rgba(8, 9, 8, 0.68);
-      font-size: 0.75rem;
+      min-height: 18px;
     }
 
     .footer {
-      display: grid;
-      grid-template-columns: 1fr auto auto;
-      gap: 30px;
+      position: relative;
+      z-index: 2;
+      display: flex;
       align-items: center;
-      padding: 24px var(--pad);
-      border-top: 1px solid rgba(8, 9, 8, 0.2);
+      justify-content: space-between;
+      gap: 30px;
+      padding-block: 24px;
+      border-top: 1px solid rgba(75, 36, 28, 0.2);
       font-size: 0.72rem;
     }
 
     .footer-links {
       display: flex;
-      gap: 18px;
+      gap: 20px;
+    }
+
+    .footer a {
+      border-bottom: 1px solid transparent;
+      transition: border-color 200ms ease;
     }
 
     .footer a:hover {
-      text-decoration: underline;
+      border-bottom-color: currentColor;
     }
 
-    /* Reveal */
+    /* Reveal motion */
     .reveal {
       opacity: 0;
-      transform: translateY(34px);
-      transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
-        transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+      transform: translateY(32px);
+      transition:
+        opacity 800ms cubic-bezier(0.16, 1, 0.3, 1),
+        transform 800ms cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .reveal.is-visible {
@@ -1160,218 +1117,80 @@
       transform: translateY(0);
     }
 
-    @keyframes load-line {
-      to { transform: scaleX(1); }
+    @keyframes float-one {
+      0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+      50% { transform: translate3d(-28px, 24px, 0) rotate(8deg); }
     }
 
-    @keyframes orbit {
-      from { transform: rotate(0deg) translateX(clamp(110px, 15vw, 215px)); }
-      to { transform: rotate(360deg) translateX(clamp(110px, 15vw, 215px)); }
+    @keyframes float-two {
+      0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+      50% { transform: translate3d(28px, -20px, 0) rotate(-7deg); }
     }
 
-    @keyframes scroll-line {
-      0%, 100% { opacity: 0.25; transform: scaleY(0.35); transform-origin: top; }
-      50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
+    @keyframes float-three {
+      0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+      50% { transform: translate3d(12px, 22px, 0) scale(1.08); }
     }
 
     @keyframes marquee {
       to { transform: translateX(-50%); }
     }
 
-    @media (max-width: 900px) {
-      .site-header {
-        height: 64px;
-      }
-
-      :root {
-        --header-h: 64px;
-      }
-
-      .nav-grid {
-        grid-template-columns: 1fr auto;
-      }
-
-      .brand {
-        padding-inline: var(--pad);
+    @media (max-width: 920px) {
+      .nav-right {
+        display: none;
       }
 
       .menu-button {
-        display: flex;
+        display: inline-flex;
       }
 
-      .nav-links {
+      .nav-right.is-open {
         position: fixed;
-        z-index: 89;
-        top: var(--header-h);
-        right: 0;
-        left: 0;
+        top: 94px;
+        right: var(--pad);
+        left: var(--pad);
         display: grid;
-        background: var(--ink);
-        border-bottom: 1px solid var(--line);
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-16px);
-        transition: opacity 220ms ease, visibility 220ms ease, transform 220ms ease;
+        gap: 8px;
+        padding: 16px;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: var(--white);
+        box-shadow: var(--shadow);
       }
 
-      .nav-links.is-open {
-        visibility: visible;
-        opacity: 1;
-        transform: translateY(0);
+      .nav-right.is-open .nav-links {
+        display: grid;
       }
 
-      .nav-link {
-        justify-content: space-between;
-        min-height: 74px;
-        border-top: 1px solid var(--line);
-        border-left: 0;
-        font-size: 1.1rem;
+      .nav-right.is-open .nav-link {
+        display: flex;
+        min-height: 54px;
+        align-items: center;
+        padding-inline: 16px;
       }
 
-      .hero-field {
-        min-height: 30vh;
+      .nav-right.is-open .nav-cta {
+        margin: 4px 0 0;
+        text-align: center;
       }
 
-      .hero-foot,
-      .project-note,
-      .profile-body,
+      .hero-bottom,
+      .project,
       .contact-grid {
         grid-template-columns: 1fr;
       }
 
-      .project-note .link-arrow {
-        justify-self: start;
+      .hero-actions {
+        justify-content: flex-start;
       }
 
-      .profile-grid {
-        grid-template-columns: 1fr;
+      .project-copy {
+        min-height: 520px;
       }
 
-      .profile-image {
-        min-height: min(110vw, 720px);
-      }
-
-      .profile-copy {
-        border-top: 1px solid var(--line-dark);
-        border-left: 0;
-      }
-
-      .process-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .process-card:nth-child(3) {
-        border-left: 0;
-      }
-
-      .process-card:nth-child(n + 3) {
-        border-top: 1px solid var(--line);
-      }
-
-      .contact-grid {
-        gap: 70px;
-      }
-    }
-
-    @media (max-width: 620px) {
-      .micro {
-        font-size: 0.61rem;
-      }
-
-      .hero-meta {
-        grid-template-columns: 1fr auto;
-      }
-
-      .hero-meta .micro:first-child {
-        max-width: 170px;
-      }
-
-      .hero h1 {
-        font-size: clamp(3.2rem, 15.5vw, 5.6rem);
-      }
-
-      .scroll-cue {
-        display: none;
-      }
-
-      .section-heading,
-      .statement,
-      .experience-top,
-      .cap-head,
-      .process-head {
-        grid-template-columns: 1fr;
-        gap: 30px;
-      }
-
-      .project-head {
-        grid-template-columns: 1fr auto;
-      }
-
-      .project-role {
-        grid-column: 1 / -1;
-        grid-row: 2;
-      }
-
-      .project-year {
-        grid-column: 2;
-        grid-row: 1;
-      }
-
-      .project-art {
-        min-height: 440px;
-      }
-
-      .browser-mockup {
-        width: 92%;
-      }
-
-      .browser-bar {
-        grid-template-columns: auto 1fr;
-      }
-
-      .browser-bar > :last-child {
-        display: none;
-      }
-
-      .mock-site {
-        min-height: 360px;
-        padding: 30px 24px;
-      }
-
-      .mock-site h3 {
-        max-width: 88%;
-      }
-
-      .mock-site::after {
-        right: -4%;
-        width: 46%;
-      }
-
-      .experience-row {
-        grid-template-columns: 1fr auto;
-      }
-
-      .experience-row span:nth-child(2) {
-        grid-column: 1 / -1;
-        grid-row: 2;
-        color: var(--muted);
-      }
-
-      .experience-row span:last-child {
-        grid-column: 2;
-        grid-row: 1;
-      }
-
-      .experience-labels {
-        display: none;
-      }
-
-      .cap-row {
-        grid-template-columns: auto 1fr;
-      }
-
-      .cap-row p {
-        grid-column: 2;
+      .project-visual {
+        min-height: 620px;
       }
 
       .process-grid {
@@ -1379,35 +1198,124 @@
       }
 
       .process-card {
-        min-height: 280px;
-        border-top: 1px solid var(--line);
-        border-left: 0;
+        min-height: 360px;
       }
 
-      .process-card:first-child {
-        border-top: 0;
+      .studio-note-inner {
+        grid-template-columns: 0.4fr 1.6fr;
+      }
+
+      .studio-note-inner > p {
+        grid-column: 2;
+      }
+    }
+
+    @media (max-width: 640px) {
+      :root {
+        --header-height: 82px;
+      }
+
+      .site-header {
+        top: 12px;
+      }
+
+      .nav {
+        min-height: 58px;
+        padding-left: 18px;
+      }
+
+      .hero {
+        padding-top: 116px;
+      }
+
+      .hero-top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .hero h1 {
+        font-size: clamp(4rem, 19vw, 6rem);
+      }
+
+      .hero-bottom {
+        gap: 26px;
+      }
+
+      .hero-actions {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .section-intro,
+      .promise-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .project {
+        min-height: 0;
+      }
+
+      .project-copy {
+        min-height: 470px;
+      }
+
+      .project-visual {
+        min-height: 500px;
+        padding: 22px;
+      }
+
+      .browser {
+        border-radius: 18px;
+      }
+
+      .mock-page {
+        min-height: 390px;
+        padding: 26px 22px;
+      }
+
+      .mock-page h4 {
+        font-size: clamp(2.8rem, 13vw, 4.3rem);
+      }
+
+      .service-row {
+        grid-template-columns: auto 1fr;
+        gap: 20px;
+      }
+
+      .service-row p {
+        grid-column: 2;
+      }
+
+      .service-row:hover {
+        padding-inline: 10px;
+      }
+
+      .studio-note-inner {
+        grid-template-columns: 1fr;
+        gap: 26px;
+      }
+
+      .studio-note-inner > p {
+        grid-column: 1;
       }
 
       .form-row {
         grid-template-columns: 1fr;
       }
 
-      .form-actions,
+      .form-footer,
       .footer {
         align-items: flex-start;
         flex-direction: column;
       }
 
-      .form-actions {
-        display: flex;
-      }
-
-      .direct-contact {
+      .footer-links {
         flex-wrap: wrap;
-      }
-
-      .footer {
-        display: flex;
       }
     }
 
@@ -1425,14 +1333,6 @@
         transition-duration: 0.01ms !important;
       }
 
-      .loader {
-        display: none;
-      }
-
-      body.is-loading {
-        overflow: auto;
-      }
-
       .reveal {
         opacity: 1;
         transform: none;
@@ -1444,44 +1344,31 @@
     {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
-      "name": "Bertrand Rusanganwa Web Design",
-      "description": "Independent web design and development for local service and trade businesses.",
+      "name": "Bertrand Design",
+      "description": "Independent web design for small businesses and local service brands.",
       "url": "https://bertrandrusa.github.io/trades-web-design/",
       "email": "rusanganwabertrand10@gmail.com",
-      "telephone": "+1-417-234-8637",
-      "areaServed": "United States",
-      "founder": {
-        "@type": "Person",
-        "name": "Bertrand Rusanganwa",
-        "jobTitle": "Independent Web Designer and Developer"
-      }
+      "areaServed": "United States"
     }
   </script>
 </head>
 
-<body class="is-loading">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <div class="loader" id="loader" aria-hidden="true">
-    <div class="loader-mark">
-      <div class="loader-name">
-        <span>Bertrand</span>
-        <em>Design</em>
-      </div>
-      <div class="loader-track"></div>
-    </div>
-  </div>
-
-  <header class="site-header">
-    <nav class="nav-grid" aria-label="Primary navigation">
-      <a class="brand" href="#home" aria-label="Bertrand Rusanganwa, home">
-        Bertrand<span class="serif">Design</span>
+  <header class="site-header" id="siteHeader">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Bertrand Design home">
+        Bertrand<span>Design</span>
       </a>
 
-      <div class="nav-links" id="navLinks">
-        <a class="nav-link" href="#work"><span>01</span> Work</a>
-        <a class="nav-link" href="#profile"><span>02</span> Profile</a>
-        <a class="nav-link" href="#contact"><span>03</span> Contact</a>
+      <div class="nav-right" id="navRight">
+        <div class="nav-links">
+          <a class="nav-link" href="#work">Work</a>
+          <a class="nav-link" href="#services">Services</a>
+          <a class="nav-link" href="#process">Process</a>
+        </div>
+        <a class="nav-cta" href="#contact">Start a project ↗</a>
       </div>
 
       <button
@@ -1489,361 +1376,329 @@
         id="menuButton"
         type="button"
         aria-expanded="false"
-        aria-controls="navLinks"
+        aria-controls="navRight"
       >
-        Menu <span class="menu-lines" aria-hidden="true"></span>
+        Menu <span class="menu-icon" aria-hidden="true"></span>
       </button>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero frame" id="home">
-      <div class="hero-inner">
-        <div class="hero-meta">
-          <p class="micro availability">Independent web designer + developer</p>
-          <p class="micro">Mishawaka, IN / Working nationwide</p>
+    <section class="hero" id="home">
+      <span class="hero-shape shape-coral" aria-hidden="true"></span>
+      <span class="hero-shape shape-yellow" aria-hidden="true"></span>
+      <span class="hero-shape shape-lime" aria-hidden="true"></span>
+
+      <div class="frame hero-inner">
+        <div class="hero-top">
+          <p class="eyebrow">Independent web design studio</p>
+          <p class="availability eyebrow">Available for select projects</p>
         </div>
 
-        <div class="hero-field" aria-hidden="true">
-          <div class="hero-orbit"><span class="orbit-dot"></span></div>
-        </div>
-
-        <div class="hero-title-wrap">
+        <div class="hero-main">
           <h1>
-            I design <span class="serif">distinctive</span> websites that turn
-            local businesses into brands people <span class="serif">trust.</span>
+            Websites with <span class="serif">personality.</span><br>
+            Built to help your business <span class="serif">grow.</span>
           </h1>
-          <div class="hero-foot">
-            <p class="hero-intro">
-              Clear strategy, expressive visual design, and dependable code—handled
-              directly by one person from the first idea through launch.
-            </p>
-            <a class="scroll-cue micro" href="#work">Selected work</a>
+        </div>
+
+        <div class="hero-bottom">
+          <p class="hero-copy">
+            Clear structure, expressive visuals and responsive development—brought
+            together in one smooth, straightforward process.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#work">
+              Explore the work <span aria-hidden="true">↓</span>
+            </a>
+            <a class="button button-light" href="#contact">
+              Tell me about your project <span aria-hidden="true">↗</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
+
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee">
+        <span>Strategy</span>
+        <span>Web design</span>
+        <span>Responsive development</span>
+        <span>Launch support</span>
+        <span>Strategy</span>
+        <span>Web design</span>
+        <span>Responsive development</span>
+        <span>Launch support</span>
+      </div>
+    </div>
 
     <section class="work" id="work" aria-labelledby="work-title">
-      <div class="section-heading section-rule">
-        <p class="micro reveal">{ Selected work }</p>
-        <h2 class="reveal" id="work-title">
-          Digital experiences built for <span class="serif">clarity, trust</span>
-          and action.
+      <div class="frame">
+        <div class="section-intro">
+          <p class="eyebrow reveal">Selected directions</p>
+          <h2 class="reveal" id="work-title">
+            A few ways a business can look
+            <span class="serif">clearer and more memorable.</span>
+          </h2>
+        </div>
+
+        <div class="project-list">
+          <article class="project project-coral reveal">
+            <div class="project-copy">
+              <div>
+                <span class="project-number">01 / Concept direction</span>
+                <h3>Local service,<br><span class="serif">elevated.</span></h3>
+                <p>
+                  A direct, trustworthy website direction that makes services,
+                  reviews and quote requests easy to find—especially on mobile.
+                </p>
+                <div class="project-meta">
+                  <span>Site strategy</span>
+                  <span>Visual design</span>
+                  <span>Responsive build</span>
+                </div>
+              </div>
+              <span class="eyebrow">Sample concept / No client affiliation</span>
+            </div>
+
+            <div class="project-visual">
+              <div class="browser">
+                <div class="browser-bar">
+                  <div class="browser-dots"><i></i><i></i><i></i></div>
+                  <span>Local service concept</span>
+                </div>
+                <div class="mock-page">
+                  <div class="mock-nav">
+                    <span>Homekind</span>
+                    <span>Services · Reviews · Contact</span>
+                  </div>
+                  <h4>Good work.<br><span>Made easy.</span></h4>
+                  <p>
+                    Friendly, dependable service for the home—presented with
+                    confidence and clarity.
+                  </p>
+                  <span class="mock-button">Request a quote</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project project-yellow reveal">
+            <div class="project-copy">
+              <div>
+                <span class="project-number">02 / Concept direction</span>
+                <h3>One offer,<br><span class="serif">one clear action.</span></h3>
+                <p>
+                  A focused landing-page direction for a promotion, new service or
+                  campaign that needs attention without unnecessary complexity.
+                </p>
+                <div class="project-meta">
+                  <span>Landing page</span>
+                  <span>Campaign design</span>
+                  <span>Mobile first</span>
+                </div>
+              </div>
+              <span class="eyebrow">Sample concept / No client affiliation</span>
+            </div>
+
+            <div class="project-visual">
+              <div class="browser">
+                <div class="browser-bar">
+                  <div class="browser-dots"><i></i><i></i><i></i></div>
+                  <span>Campaign concept</span>
+                </div>
+                <div class="mock-page">
+                  <div class="mock-nav">
+                    <span>Freshstart</span>
+                    <span>Simple · Fast · Ready</span>
+                  </div>
+                  <h4>A brighter<br><span>next step.</span></h4>
+                  <p>
+                    A campaign page that says exactly what is offered and helps
+                    people act without getting lost.
+                  </p>
+                  <span class="mock-button">Get started</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="project project-lime reveal">
+            <div class="project-copy">
+              <div>
+                <span class="project-number">03 / Concept direction</span>
+                <h3>Old website,<br><span class="serif">new energy.</span></h3>
+                <p>
+                  A redesign direction that keeps the useful information but gives
+                  the business a cleaner structure, stronger personality and
+                  smoother mobile experience.
+                </p>
+                <div class="project-meta">
+                  <span>Website redesign</span>
+                  <span>Content structure</span>
+                  <span>Front-end</span>
+                </div>
+              </div>
+              <span class="eyebrow">Sample concept / No client affiliation</span>
+            </div>
+
+            <div class="project-visual">
+              <div class="browser">
+                <div class="browser-bar">
+                  <div class="browser-dots"><i></i><i></i><i></i></div>
+                  <span>Redesign concept</span>
+                </div>
+                <div class="mock-page">
+                  <div class="mock-nav">
+                    <span>Common Ground</span>
+                    <span>About · Work · Contact</span>
+                  </div>
+                  <h4>Familiar.<br><span>Refreshed.</span></h4>
+                  <p>
+                    A warmer, cleaner presence that feels current while staying
+                    easy for existing customers to understand.
+                  </p>
+                  <span class="mock-button">See what changed</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="promise" aria-label="Design approach">
+      <div class="frame promise-grid">
+        <p class="eyebrow reveal">The approach</p>
+        <h2 class="reveal">
+          No inflated agency talk. Just a clear process and a website that
+          <span class="serif">feels like your business.</span>
         </h2>
       </div>
-
-      <article class="project">
-        <div class="project-head">
-          <h3 class="project-title reveal"><sup>01</sup>Trade Business Website</h3>
-          <p class="project-role micro reveal">Strategy / UI design / Front-end</p>
-          <p class="project-year micro reveal">2026</p>
-        </div>
-
-        <div class="project-art project-art--plumbing">
-          <div class="browser-mockup reveal">
-            <div class="browser-bar">
-              <div class="browser-dots"><i></i><i></i><i></i></div>
-              <span>Cornerstone / Website concept</span>
-              <span>Responsive experience</span>
-            </div>
-            <div class="mock-site mock-plumbing">
-              <span class="mock-label">Plumbing done properly</span>
-              <h3>Fast help.<br><em>Done right.</em></h3>
-              <p>
-                A confident lead-generation concept that makes services, trust
-                signals and emergency contact impossible to miss.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-note">
-          <p class="reveal">
-            A concept for local trade companies that need to look established,
-            explain their services quickly, and turn mobile visitors into calls and
-            quote requests. The system balances strong art direction with practical
-            conversion design.
-          </p>
-          <span class="micro reveal">Concept study / No client affiliation</span>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-head">
-          <h3 class="project-title reveal"><sup>02</sup>Technical Portfolio</h3>
-          <p class="project-role micro reveal">UX / Visual design / Development</p>
-          <p class="project-year micro reveal">2026</p>
-        </div>
-
-        <div class="project-art project-art--portfolio">
-          <div class="browser-mockup reveal">
-            <div class="browser-bar">
-              <div class="browser-dots"><i></i><i></i><i></i></div>
-              <span>Bertrand / Technical portfolio</span>
-              <span>Software + security</span>
-            </div>
-            <div class="mock-site mock-portfolio">
-              <span class="mock-label">Software / Cloud / Cybersecurity</span>
-              <h3>Systems made<br><em>thoughtful.</em></h3>
-              <p>
-                A personal platform connecting software engineering, infrastructure,
-                data and security work through a focused narrative.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-note">
-          <p class="reveal">
-            My main technical portfolio organizes multidisciplinary work without
-            losing the reader. Its job is simple: communicate range, show evidence,
-            and make the next conversation easy.
-          </p>
-          <a
-            class="link-arrow reveal"
-            href="https://bertrandrusa.github.io/bertrandweb/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit live site <span aria-hidden="true">↗</span>
-          </a>
-        </div>
-      </article>
-
-      <article class="project">
-        <div class="project-head">
-          <h3 class="project-title reveal"><sup>03</sup>Backup Operations Portal</h3>
-          <p class="project-role micro reveal">Product UI / Full-stack development</p>
-          <p class="project-year micro reveal">2026</p>
-        </div>
-
-        <div class="project-art project-art--portal">
-          <div class="browser-mockup reveal">
-            <div class="browser-bar">
-              <div class="browser-dots"><i></i><i></i><i></i></div>
-              <span>Operations / Internal product</span>
-              <span>Private system</span>
-            </div>
-            <div class="mock-site mock-portal">
-              <span class="mock-label">Backups / Schedules / Audit trail</span>
-              <h3>Quiet tools.<br><em>Serious work.</em></h3>
-              <p>
-                A focused operations interface for monitoring backup activity,
-                permissions, schedules and system history.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="project-note">
-          <p class="reveal">
-            Built during my software engineering work at TuningSQL, this private
-            portal turns infrastructure activity into an interface people can
-            understand and operate with confidence.
-          </p>
-          <span class="micro reveal">Internal project / Details limited</span>
-        </div>
-      </article>
     </section>
 
-    <section class="statement" aria-label="Design philosophy">
-      <p class="micro reveal">{ Approach }</p>
-      <h2 class="reveal">
-        I pair the visual instincts of a designer with the
-        <span class="serif">discipline of a software engineer.</span>
-      </h2>
-    </section>
-
-    <section class="profile" id="profile" aria-labelledby="profile-title">
-      <div class="profile-grid">
-        <div class="profile-image">
-          <img
-            src="https://avatars.githubusercontent.com/u/142926167?v=4"
-            alt="Bertrand Rusanganwa standing on a city street"
-            loading="lazy"
-          >
-          <div class="profile-caption micro">
-            <span>Bertrand Rusanganwa</span>
-            <span>Designer + developer</span>
-          </div>
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="frame">
+        <div class="section-intro">
+          <p class="eyebrow reveal">Services</p>
+          <h2 class="reveal" id="services-title">
+            Everything needed to go from
+            <span class="serif">rough idea to live website.</span>
+          </h2>
         </div>
 
-        <div class="profile-copy">
+        <div class="service-list">
+          <article class="service-row reveal">
+            <span class="service-number">01</span>
+            <h3>Structure &amp; direction</h3>
+            <p>
+              Clarifying the audience, the message, the pages and the action you
+              want visitors to take.
+            </p>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-number">02</span>
+            <h3>Visual web design</h3>
+            <p>
+              Color, typography, layout and interaction shaped into a distinct,
+              consistent visual experience.
+            </p>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-number">03</span>
+            <h3>Responsive development</h3>
+            <p>
+              A fast, accessible build that works smoothly across phones, tablets
+              and desktop screens.
+            </p>
+          </article>
+          <article class="service-row reveal">
+            <span class="service-number">04</span>
+            <h3>Launch &amp; support</h3>
+            <p>
+              Final checks, domain guidance, publication and practical help with
+              updates after the website goes live.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process" id="process" aria-labelledby="process-title">
+      <div class="frame">
+        <div class="section-intro">
           <div>
-            <p class="micro">{ Profile }</p>
-            <h2 class="reveal" id="profile-title">
-              Thoughtful design should feel <span class="serif">distinctive</span>
-              and work without friction.
-            </h2>
-          </div>
-
-          <div class="profile-body reveal">
-            <p>
-              <strong>What I bring</strong>
-              I am a computer science graduate, software engineer, and independent
-              web designer. That mix lets me shape the visual experience and build
-              the real product behind it.
-            </p>
-            <p>
-              <strong>How I work</strong>
-              You work directly with me—from structure and copy direction to visual
-              design, responsive development, launch, and continued support.
+            <p class="eyebrow reveal">The process</p>
+            <p class="process-note reveal">
+              Simple enough to understand. Flexible enough to fit the project.
             </p>
           </div>
+          <h2 class="reveal" id="process-title">
+            Three stages. One
+            <span class="serif">smooth collaboration.</span>
+          </h2>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-card reveal">
+            <span class="eyebrow">01 / Understand</span>
+            <h3>Get clear on the goal</h3>
+            <p>
+              We define the business, audience, content, references and the job the
+              website needs to accomplish.
+            </p>
+          </article>
+          <article class="process-card reveal">
+            <span class="eyebrow">02 / Create</span>
+            <h3>Shape the experience</h3>
+            <p>
+              The structure and visual direction become a responsive website, with
+              space for clear feedback along the way.
+            </p>
+          </article>
+          <article class="process-card reveal">
+            <span class="eyebrow">03 / Launch</span>
+            <h3>Refine and release</h3>
+            <p>
+              We check the details, make final adjustments, connect the domain and
+              publish the finished experience.
+            </p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="experience" aria-labelledby="experience-title">
-      <div class="experience-top">
-        <p class="micro reveal">{ Experience }</p>
-        <h2 class="reveal" id="experience-title">
-          Design understanding,<br><span class="serif">technical depth.</span>
+    <section class="studio-note" aria-labelledby="studio-title">
+      <div class="frame studio-note-inner">
+        <p class="eyebrow reveal">About the studio</p>
+        <h2 class="reveal" id="studio-title">
+          Small by design. <span class="serif">Direct from start to finish.</span>
         </h2>
-      </div>
-
-      <div class="experience-table reveal">
-        <div class="experience-row experience-labels micro">
-          <span>Role</span>
-          <span>Company</span>
-          <span>Year</span>
-        </div>
-        <div class="experience-row">
-          <span>Independent Web Designer</span>
-          <span>Bertrand Design</span>
-          <span>2026—Now</span>
-        </div>
-        <div class="experience-row">
-          <span>Software Engineer Intern</span>
-          <span>TuningSQL</span>
-          <span>2026—Now</span>
-        </div>
-        <div class="experience-row">
-          <span>Software Development Intern</span>
-          <span>Rwanda Space Agency</span>
-          <span>2023</span>
-        </div>
-        <div class="experience-row">
-          <span>B.S. Computer Science</span>
-          <span>Missouri State University</span>
-          <span>2026</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="capabilities" id="services" aria-labelledby="cap-title">
-      <div class="cap-head">
-        <p class="micro reveal">{ Capabilities }</p>
-        <h2 class="reveal" id="cap-title">
-          Everything needed to move from an idea to a
-          <span class="serif">working website.</span>
-        </h2>
-      </div>
-
-      <div class="cap-list">
-        <article class="cap-row reveal">
-          <span class="cap-number">01</span>
-          <h3>Strategy &amp; structure</h3>
-          <p>
-            Audience, positioning, page hierarchy, content direction, calls to
-            action and a clear path through the website.
-          </p>
-        </article>
-        <article class="cap-row reveal">
-          <span class="cap-number">02</span>
-          <h3>Visual web design</h3>
-          <p>
-            Distinctive art direction, responsive layouts, typography, color,
-            interface components and intentional motion.
-          </p>
-        </article>
-        <article class="cap-row reveal">
-          <span class="cap-number">03</span>
-          <h3>Front-end development</h3>
-          <p>
-            Fast, accessible implementation across devices using clean HTML, CSS,
-            JavaScript and modern frameworks when the project needs them.
-          </p>
-        </article>
-        <article class="cap-row reveal">
-          <span class="cap-number">04</span>
-          <h3>Launch &amp; support</h3>
-          <p>
-            Domain and hosting guidance, launch preparation, technical checks,
-            content updates and practical help after publication.
-          </p>
-        </article>
-      </div>
-    </section>
-
-    <section class="process" aria-labelledby="process-title">
-      <div class="process-head">
-        <p class="micro reveal">{ Process }</p>
-        <h2 class="reveal" id="process-title">
-          Clear decisions.<br><span class="serif">No mystery.</span>
-        </h2>
-      </div>
-
-      <div class="process-grid reveal">
-        <article class="process-card">
-          <span class="micro">01 / Discover</span>
-          <h3>Understand the business</h3>
-          <p>
-            We define your audience, offer, goals, content, references and the
-            practical job the website must accomplish.
-          </p>
-        </article>
-        <article class="process-card">
-          <span class="micro">02 / Direct</span>
-          <h3>Set the visual idea</h3>
-          <p>
-            I establish the structure and creative direction before developing the
-            full responsive experience.
-          </p>
-        </article>
-        <article class="process-card">
-          <span class="micro">03 / Build</span>
-          <h3>Design in real code</h3>
-          <p>
-            The approved direction becomes a fast, accessible site that works
-            cleanly across phones, tablets and desktops.
-          </p>
-        </article>
-        <article class="process-card">
-          <span class="micro">04 / Launch</span>
-          <h3>Review, refine, release</h3>
-          <p>
-            We test the details, make final adjustments, connect the domain and put
-            the finished site to work.
-          </p>
-        </article>
+        <p class="reveal">
+          Bertrand Design is an independent web design practice focused on clear,
+          expressive websites for small businesses and local service brands.
+        </p>
       </div>
     </section>
 
     <section class="contact" id="contact" aria-labelledby="contact-title">
-      <div class="contact-marquee" aria-hidden="true">
-        <span>Let’s make something clear &amp; memorable. </span>
-        <span>Let’s make something clear &amp; memorable. </span>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-intro">
-          <p class="micro">{ Start a project }</p>
-          <h2 id="contact-title">
-            Have a business worth <span class="serif">noticing?</span>
+      <div class="frame contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow reveal">Start a conversation</p>
+          <h2 class="reveal" id="contact-title">
+            Have a project <span class="serif">in mind?</span>
           </h2>
-          <p>
-            Tell me what you do, what is not working with your current website, and
-            what you want the new one to achieve.
+          <p class="reveal">
+            Share what the business does, what the website needs to improve and
+            what a successful result would look like.
           </p>
         </div>
 
-        <form class="contact-form" id="contactForm">
+        <form class="contact-form reveal" id="contactForm">
           <div class="form-row">
             <div class="field">
-              <label for="name">Your name</label>
-              <input id="name" name="name" type="text" autocomplete="name" placeholder="First and last name" required>
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required>
             </div>
             <div class="field">
               <label for="email">Email</label>
@@ -1852,73 +1707,61 @@
           </div>
 
           <div class="field">
-            <label for="business">Business or organization</label>
+            <label for="business">Business or project</label>
             <input id="business" name="business" type="text" placeholder="What are you building?" required>
           </div>
 
           <div class="field">
-            <label for="message">Project details</label>
+            <label for="message">What do you need?</label>
             <textarea
               id="message"
               name="message"
-              placeholder="A short description, your goals, and any timeline you have in mind."
+              placeholder="A short description, your goals and any timeline you have in mind."
               required
             ></textarea>
           </div>
 
-          <div class="form-actions">
-            <button class="submit-button" type="submit">
+          <div class="form-footer">
+            <button class="button button-primary" type="submit">
               Send inquiry <span aria-hidden="true">↗</span>
             </button>
-            <div class="direct-contact">
-              <a href="mailto:rusanganwabertrand10@gmail.com">Email directly</a>
-              <a href="tel:+14172348637">Call</a>
-            </div>
+            <span class="form-note">This opens your email application.</span>
           </div>
           <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </form>
       </div>
 
-      <footer class="footer">
-        <span>© <span id="year"></span> Bertrand Rusanganwa</span>
+      <footer class="frame footer">
+        <span>© <span id="year"></span> Bertrand Design</span>
         <div class="footer-links">
-          <a href="https://www.linkedin.com/in/bertrand-rusanganwa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-          <a href="https://github.com/bertrandrusa" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="mailto:rusanganwabertrand10@gmail.com">Email</a>
+          <a href="#home">Back to top ↑</a>
         </div>
-        <a href="#home">Back to top ↑</a>
       </footer>
     </section>
   </main>
 
   <script>
     const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const loader = document.getElementById("loader");
+    const siteHeader = document.getElementById("siteHeader");
     const menuButton = document.getElementById("menuButton");
-    const navLinks = document.getElementById("navLinks");
+    const navRight = document.getElementById("navRight");
 
-    function finishLoading() {
-      loader.classList.add("is-hidden");
-      document.body.classList.remove("is-loading");
-    }
-
-    if (reducedMotion) {
-      finishLoading();
-    } else {
-      window.addEventListener("load", () => {
-        window.setTimeout(finishLoading, 780);
-      });
-      window.setTimeout(finishLoading, 2200);
-    }
+    window.addEventListener(
+      "scroll",
+      () => siteHeader.classList.toggle("is-scrolled", window.scrollY > 40),
+      { passive: true }
+    );
 
     menuButton.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("is-open");
+      const isOpen = navRight.classList.toggle("is-open");
       menuButton.setAttribute("aria-expanded", String(isOpen));
       document.body.classList.toggle("menu-open", isOpen);
     });
 
-    document.querySelectorAll(".nav-link").forEach((link) => {
+    navRight.querySelectorAll("a").forEach((link) => {
       link.addEventListener("click", () => {
-        navLinks.classList.remove("is-open");
+        navRight.classList.remove("is-open");
         menuButton.setAttribute("aria-expanded", "false");
         document.body.classList.remove("menu-open");
       });
@@ -1958,27 +1801,28 @@
       }
 
       const data = new FormData(contactForm);
-      const subject = encodeURIComponent(`Website project inquiry — ${data.get("business")}`);
+      const subject = encodeURIComponent(`Website inquiry — ${data.get("business")}`);
       const body = encodeURIComponent(
-`Hi Bertrand,
+`Hello,
 
-My name is ${data.get("name")}.
+Name:
+${data.get("name")}
 
-Business or organization:
+Business or project:
 ${data.get("business")}
 
 Project details:
 ${data.get("message")}
 
-My email:
+Reply email:
 ${data.get("email")}`
       );
 
-      formStatus.textContent = "Opening your email application with the project details included…";
+      formStatus.textContent = "Opening your email application…";
       window.location.href = `mailto:rusanganwabertrand10@gmail.com?subject=${subject}&body=${body}`;
 
       window.setTimeout(() => {
-        formStatus.textContent = "Your inquiry is ready. Review it in your email application and press Send.";
+        formStatus.textContent = "Your message is ready. Review it in your email application and press Send.";
       }, 700);
     });
   </script>
